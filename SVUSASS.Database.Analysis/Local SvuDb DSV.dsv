@@ -1,0 +1,134 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="1ce829c2-f7bf-40b0-afdd-8eab031f6026" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Local SvuDb DSV</ID>
+  <Name>Local SvuDb DSV</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Local SvuDb</DataSourceID>
+  <Schema>
+    <xs:schema id="Local_x0020_SvuDb_x0020_DSV" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Local_x0020_SvuDb_x0020_DSV" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="b314c37d-1af6-4740-bf7c-47b29a7eec4f">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="SVUDataSet_HeartDisease" msprop:design-time-name="1b5e289f-b74f-452d-a8c5-192ae35d098c" msprop:DbTableName="HeartDisease" msprop:FriendlyName="HeartDisease" msprop:DbSchemaName="SVUDataSet" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Age" msprop:design-time-name="54d21070-1ce5-4d38-8817-7dc93d86570b" msprop:DbColumnName="Age" msprop:FriendlyName="Age" type="xs:double" minOccurs="0" />
+                  <xs:element name="ChestPainType" msprop:design-time-name="5e4df01b-3b7e-4c67-8cb6-0460d2b6a14f" msprop:DbColumnName="ChestPainType" msprop:FriendlyName="ChestPainType" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="RestBloodPressure" msprop:design-time-name="ef235964-b828-4492-a86f-475bd0351932" msprop:DbColumnName="RestBloodPressure" msprop:FriendlyName="RestBloodPressure" type="xs:double" minOccurs="0" />
+                  <xs:element name="BloodSugar" msprop:design-time-name="fba7bd05-1a82-4d5a-8df0-df153f9c0d57" msprop:DbColumnName="BloodSugar" msprop:FriendlyName="BloodSugar" type="xs:boolean" />
+                  <xs:element name="RestElectro" msprop:design-time-name="c5674c84-9c99-4236-a0cd-0a0264b0760c" msprop:DbColumnName="RestElectro" msprop:FriendlyName="RestElectro" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MaxHeartRate" msprop:design-time-name="ffc6de35-b746-424a-bb81-d5b84d8d2f37" msprop:DbColumnName="MaxHeartRate" msprop:FriendlyName="MaxHeartRate" type="xs:double" minOccurs="0" />
+                  <xs:element name="ExerciceAngina" msprop:design-time-name="0c376e7f-eb47-4074-b4db-2f6773adb802" msprop:DbColumnName="ExerciceAngina" msprop:FriendlyName="ExerciceAngina" type="xs:boolean" />
+                  <xs:element name="Disease" msprop:design-time-name="ab0fbd4b-7e03-4f1a-9fe4-7ae3441d66da" msprop:DbColumnName="Disease" msprop:FriendlyName="Disease" type="xs:boolean" />
+                  <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="76b8da41-057a-40ee-a954-94d300ef6a00" msprop:DbColumnName="Id" msprop:FriendlyName="Id" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="SVUDataSet_Tennis" msprop:design-time-name="dea188fe-0016-4cda-aa68-d1cf374251ed" msprop:DbTableName="Tennis" msprop:FriendlyName="Tennis" msprop:DbSchemaName="SVUDataSet" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="outlook" msprop:design-time-name="f5a44e00-53a7-468c-9b6e-9fec7cb41b5f" msprop:DbColumnName="outlook" msprop:FriendlyName="outlook" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="temp" msprop:design-time-name="e4d515c5-ec9f-4cf7-9c2d-6addfb149d0f" msprop:DbColumnName="temp" msprop:FriendlyName="temp" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="humidity" msprop:design-time-name="25992a2e-dec5-4d09-80d6-a6c37cfc5baa" msprop:DbColumnName="humidity" msprop:FriendlyName="humidity" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="wind" msprop:design-time-name="b396ecf5-cc63-4332-8311-414f816c7e83" msprop:DbColumnName="wind" msprop:FriendlyName="wind" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="play" msprop:design-time-name="5cb7bf4e-c37f-4afb-bd1c-338ce52dc9c6" msprop:DbColumnName="play" msprop:FriendlyName="play" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="85600cc5-6b90-4f3e-9d9d-bc59acc5d545" msprop:DbColumnName="Id" msprop:FriendlyName="Id" type="xs:int" />
+                  <xs:element name="CreationDate" msprop:design-time-name="bc438c3e-b865-44b6-b422-cc53c91c061e" msprop:DbColumnName="CreationDate" msprop:FriendlyName="CreationDate" type="xs:dateTime" />
+                  <xs:element name="LastUpdatedDate" msprop:design-time-name="82a36cdf-67e4-4101-b149-8288c7b7dc78" msprop:DbColumnName="LastUpdatedDate" msprop:FriendlyName="LastUpdatedDate" type="xs:dateTime" />
+                  <xs:element name="Note" msprop:design-time-name="bba6c69d-5ab5-45be-896c-8321791e0641" msprop:DbColumnName="Note" msprop:FriendlyName="Note" type="xs:string" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//SVUDataSet_HeartDisease" />
+          <xs:field xpath="Id" />
+        </xs:unique>
+        <xs:unique name="SVUDataSet_Tennis_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//SVUDataSet_Tennis" />
+          <xs:field xpath="Id" />
+        </xs:unique>
+      </xs:element>
+    </xs:schema>
+    <Local_x0020_SvuDb_x0020_DSV xmlns="" />
+  </Schema>
+</DataSourceView>
