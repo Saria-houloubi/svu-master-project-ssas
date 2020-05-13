@@ -34,14 +34,14 @@ namespace SVUSASS.Web.API
             services.AddCors(options =>
             {
                 //Add dev CORS Policy
-                options.AddPolicy("Development2", builder =>
+                options.AddPolicy("Development", builder =>
                 {
                     builder.AllowAnyOrigin()
                            .AllowAnyHeader()
                            .AllowAnyMethod();
                 });
                 //Addm Production CORS Policy
-                options.AddPolicy("Development", buider =>
+                options.AddPolicy("Production", buider =>
                 {
                     buider.WithOrigins(Configuration.GetSection("CORS_Origins").Get<string[]>())
                           .AllowAnyHeader()
@@ -65,9 +65,8 @@ namespace SVUSASS.Web.API
                 app.UseHsts();
             }
 
-            app.UseCors(env.EnvironmentName);
+            app.UseCors(env.IsDevelopment() ? "Development" : "Production");
 
-            app.UseHttpsRedirection();
             app.UseMvc();
         }
     }
