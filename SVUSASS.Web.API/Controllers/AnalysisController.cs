@@ -61,20 +61,23 @@ namespace SVUSASS.Web.API.Controllers
                                 //Get the reader
                                 using (var reader = command.ExecuteReader())
                                 {
-                                    //holds the results from the reader as row count and the filedName, value pair
-                                    var dbReadResult = new Dictionary<int, KeyValuePair<string, string>>();
+                                    //holds each row and its column values
+                                    var results = new List<Dictionary<string, string>>();
                                     //Start reading the data
                                     while (reader.Read())
                                     {
+                                        //holds the results from the reader as row count and the filedName, value pair
+                                        var dbReadResult = new Dictionary<string, string>();
                                         //loop through the filds
                                         for (int i = 0; i < reader.FieldCount; i++)
                                         {
-                                            dbReadResult.Add(i, new KeyValuePair<string, string>(reader.GetName(i), reader.GetValue(i).ToString()));
+                                            dbReadResult.Add(reader.GetName(i), reader.GetValue(i)?.ToString());
                                         }
+                                        results.Add(dbReadResult);
 
                                     }
 
-                                    return Ok(dbReadResult);
+                                    return Ok(results);
                                 }
                             }
 

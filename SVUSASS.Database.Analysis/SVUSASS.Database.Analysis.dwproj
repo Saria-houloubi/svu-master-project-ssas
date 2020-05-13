@@ -28,12 +28,12 @@
   </DataSourceViews>
   <MiningModels>
     <ProjectItem>
-      <Name>Remote Tennis MS.dmm</Name>
-      <FullPath>Remote Tennis MS.dmm</FullPath>
+      <Name>Tennis MS Bayes.dmm</Name>
+      <FullPath>Tennis MS Bayes.dmm</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Tennis MS.dmm</Name>
-      <FullPath>Tennis MS.dmm</FullPath>
+      <Name>Tennis MS ID3.dmm</Name>
+      <FullPath>Tennis MS ID3.dmm</FullPath>
     </ProjectItem>
   </MiningModels>
   <Configurations>

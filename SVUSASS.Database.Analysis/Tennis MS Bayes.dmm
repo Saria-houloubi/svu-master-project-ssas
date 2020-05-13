@@ -1,0 +1,196 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="12da9e6a-ca59-45bd-81db-ad8a61571830" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Tennis MS Bayes</ID>
+  <Name>Tennis MS Bayes</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
+      <Value>SVUDataSet_Tennis</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="5c1559f1-2a87-45c9-8af4-7843563a96db">
+    <DataSourceViewID>Local SvuDb DSV</DataSourceViewID>
+  </Source>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="e325dd39-c4c7-43fd-908e-12a5348f150e">
+      <ID>Humidity</ID>
+      <Name>Humidity</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="36539709-ea9a-4793-b2e6-9b49e6f8a850">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="856ba954-741f-47d2-8b36-572200e4d8d1">
+            <TableID>SVUDataSet_Tennis</TableID>
+            <ColumnID>humidity</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="820b1bd9-2de8-4a6b-b94a-a72c37850a38">
+      <ID>Id</ID>
+      <Name>Id</Name>
+      <IsKey>true</IsKey>
+      <Type>Long</Type>
+      <Content>Key</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f53a53af-c032-4cff-a771-9ef16fed3c47">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="296ef80a-bc73-40a3-91fa-f84afd837a4e">
+            <TableID>SVUDataSet_Tennis</TableID>
+            <ColumnID>Id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="a6ece0d2-167e-4726-8d29-422391d068b9">
+      <ID>Outlook</ID>
+      <Name>Outlook</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7599f6fa-2ad5-44c3-b8e4-fbf0e1aefadc">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a7ef64e5-d18b-4e04-9904-b2642bb25d45">
+            <TableID>SVUDataSet_Tennis</TableID>
+            <ColumnID>outlook</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="ce09b999-5b62-4430-8f92-be245b6647b6">
+      <ID>Play</ID>
+      <Name>Play</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="029ab240-d0da-4157-9a33-be33f5dc3dd1">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="06973952-ee15-40eb-bcb4-5ae207bc27c6">
+            <TableID>SVUDataSet_Tennis</TableID>
+            <ColumnID>play</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="26350867-cfaa-4ae5-932f-5495ae131a9a">
+      <ID>Temp</ID>
+      <Name>Temp</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="26e49c3d-4f0e-4343-810a-9004adeaa47a">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9462d517-8152-42b0-a46e-713ec7ba3c40">
+            <TableID>SVUDataSet_Tennis</TableID>
+            <ColumnID>temp</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="214a9d9c-0d82-40a9-8fe4-506b9ddaa02b">
+      <ID>Wind</ID>
+      <Name>Wind</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="28b0d501-51a1-46b8-a52b-9162ba9bfd04">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ce1a6d54-4f7d-45a0-9504-1933f9a4ade4">
+            <TableID>SVUDataSet_Tennis</TableID>
+            <ColumnID>wind</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel dwd:design-time-name="f7d2cbf3-e75d-49ae-88c9-2ad051c3a230">
+      <ID>Tennis MM Bayes</ID>
+      <Name>Tennis MM Bayes</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Naive_Bayes</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="4f58520f-85b8-439c-bcd1-5d6a1bfc3bc2">
+          <ID>Humidity</ID>
+          <Name>Humidity</Name>
+          <SourceColumnID>Humidity</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="66d1052b-1307-484e-8d4b-222e4ecaaa96">
+          <ID>Id</ID>
+          <Name>Id</Name>
+          <SourceColumnID>Id</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="9f05b9de-1121-482e-acdf-04066da25974">
+          <ID>Outlook</ID>
+          <Name>Outlook</Name>
+          <SourceColumnID>Outlook</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="1d216a79-0913-4cbd-b563-85268e6b6b4a">
+          <ID>Play</ID>
+          <Name>Play</Name>
+          <SourceColumnID>Play</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="aa0c1a0c-1da3-4d56-9591-7bad468295a5">
+          <ID>Temp</ID>
+          <Name>Temp</Name>
+          <SourceColumnID>Temp</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="f591d553-8c28-41b6-8a91-60df4ee81690">
+          <ID>Wind</ID>
+          <Name>Wind</Name>
+          <SourceColumnID>Wind</SourceColumnID>
+        </Column>
+      </Columns>
+    </MiningModel>
+  </MiningModels>
+</MiningStructure>
