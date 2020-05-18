@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SVUSASS.Logging.IServices;
 using SVUSASS.Logging.Services;
+using SVUSASS.Web.API.Middlewares;
 
 namespace SVUSASS.Web.API
 {
@@ -30,19 +31,16 @@ namespace SVUSASS.Web.API
         {
 
             //The environment that we are working in
-            var envName = services.BuildServiceProvider().GetService<IHostingEnvironment>().EnvironmentName;
+            var env = services.BuildServiceProvider().GetService<IHostingEnvironment>();
 
             //Add the wanted services to the DI pipeline
-            switch (envName.ToLower())
+            if (!env.IsDevelopment())
             {
-                case "development":
-                    services.AddSingleton<ILoggingService, DefaultLoggingSservice>();
-                    break;
-                case "production":
-                    services.AddSingleton<ILoggingService, SaveMyDataLoggingService>();
-                    break;
-                default:
-                    break;
+                services.AddSingleton<ILoggingService, DefaultLoggingSservice>();
+            }
+            else
+            {
+                services.AddSingleton<ILoggingService, SaveMyDataLoggingService>();
             }
 
             services.AddCors(options =>
@@ -78,6 +76,7 @@ namespace SVUSASS.Web.API
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            app.UseMiddleware<CustomLoggingMiddleware>();
 
             app.UseCors(env.IsDevelopment() ? "Development" : "Production");
 

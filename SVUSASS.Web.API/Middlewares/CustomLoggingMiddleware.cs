@@ -13,6 +13,7 @@ namespace SVUSASS.Web.API.Middlewares
         private readonly RequestDelegate next;
         public ILoggingService LoggingService { get; private set; }
         #endregion
+
         #region Constructer
         /// <summary>
         /// Default constructer
