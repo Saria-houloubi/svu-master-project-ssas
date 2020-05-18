@@ -34,7 +34,7 @@ namespace SVUSASS.Web.API
             var env = services.BuildServiceProvider().GetService<IHostingEnvironment>();
 
             //Add the wanted services to the DI pipeline
-            if (!env.IsDevelopment())
+            if (env.IsDevelopment())
             {
                 services.AddSingleton<ILoggingService, DefaultLoggingSservice>();
             }
