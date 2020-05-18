@@ -8,19 +8,11 @@
   </Database>
   <DataSources>
     <ProjectItem>
-      <Name>Remote svuDb.ds</Name>
-      <FullPath>Remote svuDb.ds</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>Local SvuDb.ds</Name>
       <FullPath>Local SvuDb.ds</FullPath>
     </ProjectItem>
   </DataSources>
   <DataSourceViews>
-    <ProjectItem>
-      <Name>Remote SvuDb DSV.dsv</Name>
-      <FullPath>Remote SvuDb DSV.dsv</FullPath>
-    </ProjectItem>
     <ProjectItem>
       <Name>Local SvuDb DSV.dsv</Name>
       <FullPath>Local SvuDb DSV.dsv</FullPath>
@@ -35,6 +27,10 @@
       <Name>Tennis MS ID3.dmm</Name>
       <FullPath>Tennis MS ID3.dmm</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Heart Disease MS Bayes.dmm</Name>
+      <FullPath>Heart Disease MS Bayes.dmm</FullPath>
+    </ProjectItem>
   </MiningModels>
   <Configurations>
     <Configuration>
@@ -42,22 +38,12 @@
       <Options>
         <ConnectionMappings>
           <ConfigurationSetting>
-            <Id>Remote svuDb</Id>
-            <Name>Remote svuDb</Name>
-            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=35.168.118.12,1433;Persist Security Info=True;Password=;User ID=;Initial Catalog=svuDb</Value>
-          </ConfigurationSetting>
-          <ConfigurationSetting>
             <Id>Local SvuDb</Id>
             <Name>Local SvuDb</Name>
             <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=.;Integrated Security=SSPI;Initial Catalog=svuDb</Value>
           </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>
-          <ConfigurationSetting>
-            <Id>Remote svuDb</Id>
-            <Name>Remote svuDb</Name>
-            <Value xsi:type="xsd:int">1</Value>
-          </ConfigurationSetting>
           <ConfigurationSetting>
             <Id>Local SvuDb</Id>
             <Name>Local SvuDb</Name>

@@ -74,7 +74,6 @@ namespace SVUSASS.Web.API.Controllers
                                             dbReadResult.Add(reader.GetName(i), reader.GetValue(i)?.ToString());
                                         }
                                         results.Add(dbReadResult);
-
                                     }
 
                                     return Ok(results);

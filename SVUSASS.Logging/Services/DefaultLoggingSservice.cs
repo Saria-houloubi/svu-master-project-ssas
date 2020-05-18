@@ -1,5 +1,7 @@
-﻿using SVUSASS.Logging.IServices;
+﻿using Microsoft.AspNetCore.Http;
+using SVUSASS.Logging.IServices;
 using System;
+using System.Threading.Tasks;
 
 namespace SVUSASS.Logging.Services
 {
@@ -17,9 +19,18 @@ namespace SVUSASS.Logging.Services
 
         }
         #endregion
-        public void LogException(Exception ex)
+        public Task LogException(Exception ex)
         {
             Console.WriteLine(ex.GetBaseException().Message);
+
+            return Task.CompletedTask;
+        }
+
+        public Task LogRequest(HttpRequest data)
+        {
+            Console.WriteLine(data.ToString());
+
+            return Task.CompletedTask;
         }
     }
 }

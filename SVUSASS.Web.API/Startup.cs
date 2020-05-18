@@ -29,7 +29,21 @@ namespace SVUSASS.Web.API
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddSingleton<ILoggingService, DefaultLoggingSservice>();
+            //The environment that we are working in
+            var envName = services.BuildServiceProvider().GetService<IHostingEnvironment>().EnvironmentName;
+
+            //Add the wanted services to the DI pipeline
+            switch (envName.ToLower())
+            {
+                case "development":
+                    services.AddSingleton<ILoggingService, DefaultLoggingSservice>();
+                    break;
+                case "production":
+                    services.AddSingleton<ILoggingService, SaveMyDataLoggingService>();
+                    break;
+                default:
+                    break;
+            }
 
             services.AddCors(options =>
             {
