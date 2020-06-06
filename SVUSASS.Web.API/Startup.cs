@@ -40,7 +40,8 @@ namespace SVUSASS.Web.API
             }
             else
             {
-                services.AddSingleton<ILoggingService, SaveMyDataLoggingService>();
+                //REMOVED on 06/06/2020 due to throughing 500 server erros on production
+                //services.AddSingleton<ILoggingService, SaveMyDataLoggingService>();
             }
 
             services.AddCors(options =>
@@ -76,7 +77,7 @@ namespace SVUSASS.Web.API
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            app.UseMiddleware<CustomLoggingMiddleware>();
+           app.UseMiddleware<CustomLoggingMiddleware>();
 
             app.UseCors(env.IsDevelopment() ? "Development" : "Production");
 
